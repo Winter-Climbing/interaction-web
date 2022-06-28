@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 0% = from, 100% = to 로 대체 가능 */
+      /* 시작점이 0%와 같다면 굳이 0%를 작성할 필요는 없다. */
+      @keyframes spaceship-ani {
+        to {
+          background-position: -2550px 0;
+        }
+      }
+
+      .spaceship {
+        width: 150px;
+        height: 150px;
+        background: url(./sprite_spaceship.png) no-repeat 0 0 / auto 150px;
+        animation: spaceship-ani 1s infinite steps(17);
+      }
+
+      /* gif는 다 좋지만 치명적인 단점이 있다. 투명도가 적용이 안 된다. */
+      /* 그리고 png로 할 경우 코드로 동작을 제어할 수 있다. */
+    </style>
+  </head>
+  <body>
+    <div class="spaceship"></div>
+  </body>
+</html>
